@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetWizards @021Tech</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background: linear-gradient(270deg, #0f0, #00f, #f0f);
+      background-size: 600% 600%;
+      animation: colorShift 20s ease infinite;
+      color: #fff;
+    }
+    header { text-align: center; padding: 2rem; background: rgba(0,0,0,0.7); }
+    nav ul { display: flex; justify-content: center; list-style: none; background: #111; padding: 1rem; margin: 0; }
+    nav ul li { margin: 0 1rem; }
+    nav ul li a { color: #0f0; text-decoration: none; font-weight: bold; }
+    #hero { text-align: center; padding: 3rem; }
+    .cta { background: #0f0; border: none; padding: 1rem 2rem; font-size: 1.2rem; cursor: pointer; }
+    .product-grid { display: none; justify-content: space-around; flex-wrap: wrap; padding: 2rem; }
+    .product { background: rgba(0,0,0,0.6); margin: 1rem; padding: 1rem; border-radius: 8px; width: 250px; text-align: center; }
+    .product img { width: 100%; height: auto; }
+    #testimonials { text-align: center; padding: 2rem; }
+    .paybill { font-size: 1.5rem; color: #0f0; text-align: center; margin: 2rem 0; }
+    footer { text-align: center; padding: 1rem; background: #111; }
+    @keyframes colorShift { 0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;} }
+  </style>
+</head>
+<body>
+  <header>
+
+    <h1>NetWizards @021Tech</h1>
+    <p>Mobile Repair Software Solutions</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#payment">Payment</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <h2>Repair Smarter, Faster, Cheaper</h2>
+    <p>Affordable mobile repair software starting at just 300 KSh weekly.</p>
+    <button class="cta" id="shopBtn">Shop Now</button>
+  </section>
+
+  <section id="products">
+    <h2><b>Softwares</b></h2>
+    <div class="product-grid" id="productGrid">
+      <div class="product">
+        <img src="c:\Users\irung\Desktop\HACKER.png" alt="Hacker style graphic">
+        <h3>Screen Repair Suite</h3>
+        <p>Reliable MDM TOOLS.</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="c:\Users\irung\Desktop\HACKER.png" alt="Hacker style graphic">
+        <h3>Battery Optimizer</h3>
+        <p>Extend battery life and performance.</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="c:\Users\irung\Desktop\HACKER.png" alt="c:\Users\irung\Desktop\HACKER.png">
+        <h3>System Recovery Pro</h3>
+        <p>Restore phones to factory condition safely.</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="payment">
+    <h2>Payment</h2>
+    <p>Pay easily via M‑Pesa using our official Number:</p>
+    <div class="NUMBER">Number: <strong><b>0112002642</b></strong></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 NetWizards @021Tech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dynamic color transitions on navigation hover
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('mouseover', () => {
+        document.body.style.background = 'linear-gradient(270deg, #ff0, #f00, #0ff)';
+      });
+      link.addEventListener('mouseout', () => {
+        document.body.style.background = 'linear-gradient(270deg, #0f0, #00f, #f0f)';
+      });
+    });
+
+    // Shop Now button functionality
+    const shopBtn = document.getElementById('shopBtn');
+    const productGrid = document.getElementById('productGrid');
+
+    shopBtn.addEventListener('click', () => {
+      alert("To proceed, please send 300 KSh to MOBILE NO 0112002642 via M‑Pesa. Once payment is complete, browse and select your preferred software.");
+      productGrid.style.display = 'flex';
+      document.getElementById('products').scrollIntoView({behavior: 'smooth'});
+    });
+  </script>
+</body>
+</html>
